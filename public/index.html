@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jiphy</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="images/favicon.png">
+  <title>Jiphy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="shortcut icon" href="images/favicon.png">
 
-    <link rel="stylesheet" href="giphy.css">
-  </head>
-  <body>
-    <header class="header">
-      <img class="header__logo" src="images/logo.gif" alt="The Giphy logo">
-    </header><!-- /header -->
+  <link rel="stylesheet" href="giphy.css">
+</head>
 
-    <main class="giphy">
-      <form class="search" id="search">
-        <input type="text" class="search__field" name="search" placeholder="Search NONE of the Jifs...">
-        <button type="submit" class="search__button"></button>
-      </form><!-- /search -->
+<body>
+  <header class="header">
+    <img class="header__logo" src="images/logo.gif" alt="The Giphy logo">
+  </header><!-- /header -->
 
-      <div class="gallery"></div><!-- /gallery -->
-      <p class="not-found"></p><!-- /not-found -->
-    </main><!-- /giphy -->
+  <main class="giphy">
+    <form class="search" id="search">
+      <input type="text" class="search__field" name="search" placeholder="Search none of the Jifs...">
+      <button type="submit" class="search__button"></button>
+    </form><!-- /search -->
 
-    <footer class="footer">
-      <p class="footer__copyright"><small>&copy; <a href="https://yrgo.github.io" title="Visit Yrgo's GitHub page">Yrgo</a>, högre yrkesutbildning.</small></p>
-    </footer><!-- /footer -->
+    <div class="gallery"></div><!-- /gallery -->
+    <p class="not-found"></p><!-- /not-found -->
+  </main><!-- /giphy -->
 
-    <script src="giphy.js"></script>
-  </body>
+  <footer class="footer">
+    <p class="footer__copyright"><small>&copy; <a href="https://yrgo.github.io" title="Visit Yrgo's GitHub page">Yrgo</a>,
+        högre yrkesutbildning.</small></p>
+  </footer><!-- /footer -->
+
+  <script src="giphy.js"></script>
+</body>
+
 </html>
