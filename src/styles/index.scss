@@ -83,7 +83,6 @@
     100% {
       background: var(--giphy-yellow)
     }
-
   }
 }
 
@@ -143,11 +142,9 @@ body {
 }
 
 .search__button {
-  width: var(--search-size);
-  height: var(--search-size);
+  @include size(var(--search-size), var(--search-size));
   background-size: cover;
   background-image: url('images/search.gif');
-
   background-position: center;
   border: none;
   padding: 0;
@@ -162,6 +159,7 @@ body {
   a {
     color: var(--giphy-blue);
   }
+
   a:visited {
     color: var(--giphy-purple);
   }
