@@ -14,12 +14,11 @@ module.exports = {
     (isProduction && browsersync({
       server: 'public'
     })),
-    // (isProduction && browsersync({proxy: "localhost:8888"})),
+    // (isProduction && browsersync({proxy: "localhost:3000"})),
     postcss({
       extract: true,
       plugins: [
-        normalize,
-        browesersync
+        normalize
       ]
     })
   ]

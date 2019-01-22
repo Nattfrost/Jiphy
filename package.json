@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "build": "rollup --config",
-    "start": "rollup --config --watch --environment NODE_ENV:production"
+    "start": "rollup --config --watch --environment NODE_ENV:production",
+    "watch:styles": "node-sass --source-map true --watch src/styles/index.scss public/giphy.css"
   },
   "dependencies": {
     "autoprefixer": "^9.4.5",
