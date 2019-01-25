@@ -16,16 +16,18 @@
     <header class="header">
       <img class="header__logo" src="images/logo.gif" alt="The Giphy logo" />
     </header>
-    <!-- /header -->
-    <h3 class="title">Title</h3>
-    <h3 class="subtitle">Subtitle</h3>
+    <div class="search-title">
+      <h3 class="title">Your Search:</h3>
+      <h3 class="subtitle"></h3>
+    </div>
     <main class="giphy">
       <div class="border-wrap-rev">
         <form class="border-wrap search" id="search">
-          <input autocomplete="off" type="text" class="search__field" name="search" placeholder="Search none of the Jifs..." />
+          <input id="search-fart" autocomplete="off" type="text" class="search__field" name="search" placeholder="Search none of the Jifs..." />
           <button type="submit" class="search__button"></button>
         </form>
       </div>
+      <div class="img-wrapper"></div>
       <!-- /search -->
 
       <div class="gallery"></div>

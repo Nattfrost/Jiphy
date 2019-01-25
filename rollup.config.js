@@ -6,6 +6,7 @@ const {
 const postcss = require('rollup-plugin-postcss');
 const commonjs = require('rollup-plugin-commonjs');
 const nodeResolve = require('rollup-plugin-node-resolve');
+const injectEnv = require('rollup-plugin-inject-env');
 const filesize = require('rollup-plugin-filesize');
 const normalize = require('postcss-normalize');
 const isProduction = process.env.NODE_ENV === 'production';
@@ -19,9 +20,10 @@ module.exports = {
     sourcemap: true
   },
   plugins: [
-    filesize(),
     commonjs(),
     nodeResolve(),
+    filesize(),
+    injectEnv(),
     postcss({
       extract: true,
       plugins: [

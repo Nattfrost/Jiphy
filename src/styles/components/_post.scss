@@ -3,3 +3,182 @@
 
 // This is an example component child.
 .post__title {}
+
+
+:root {
+  --button: #6b69f6;
+  --visited: #8646e8;
+  --search-size: 4.2vh;
+  --giphy-yellow: #FDF276;
+  --giphy-red: #ED706B;
+  --giphy-purple: #8646e8;
+  --giphy-green: #71f29d;
+  --giphy-blue: #5BCAFA;
+}
+
+@font-face {
+  font-family: 'interface';
+  src: url('fonts/interface.woff') format('woff');
+  font-family: 'nexablack';
+  src: url('fonts/nexablack.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'nexaregular';
+  src: url('fonts/nexaregular.woff') format('woff');
+}
+
+@mixin size($w: 100%, $h: 100%) {
+  width: $w;
+  height: $h;
+}
+
+%body-text {
+  font-family: interface, "Hevetica Neue", helvetica, sans-serif;
+  font-size: 18px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+%display-text-bold {
+  font-family: nexablack, "Hevetica Neue", helvetica, sans-serif;
+  font-size: 24px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+%display-text-regular {
+  font-family: nexaregular, "Hevetica Neue", helvetica, sans-serif;
+  font-size: 24px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+%border-animated {
+  animation: border-wrap-animation 2.25s ease-in-out infinite;
+
+  @keyframes border-wrap-animation {
+    0% {
+      background: var(--giphy-yellow)
+    }
+
+    20% {
+      background: var(--giphy-green)
+    }
+
+    40% {
+      background: var(--giphy-blue)
+    }
+
+    60% {
+      background: var(--giphy-purple)
+    }
+
+    80% {
+      background: var(--giphy-red)
+    }
+
+    100% {
+      background: var(--giphy-yellow)
+    }
+  }
+}
+
+body {
+  @extend %body-text;
+}
+
+.search-title {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  margin-top: 10vh;
+  display: grid;
+  justify-content: center;
+}
+
+.header {
+  width: 40vw;
+}
+
+.title {
+  @extend %display-text-bold;
+}
+
+.img-wrapper {
+  margin-top: 4vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.subtitle {
+  margin-left: .4rem;
+  text-transform: capitalize;
+  @extend %display-text-regular;
+}
+
+.giphy {
+  @include size(100%, auto);
+}
+
+.header__logo {
+  @include size(100%, auto);
+  margin-bottom: 4vh;
+}
+
+.search {
+  height: var(--search-size);
+  display: flex;
+  justify-content: space-between;
+
+  :focus {
+    outline: none;
+  }
+
+  input {
+    padding-left: 20px;
+    width: 95.6%;
+    border: none;
+    caret-color: var(--giphy-blue);
+  }
+}
+
+.border-wrap {
+  padding: 1rem;
+  position: relative;
+  padding: 2px;
+  @extend %border-animated;
+}
+
+.search__button {
+  @include size(var(--search-size), var(--search-size));
+  background-size: cover;
+  background-image: url('images/search.gif');
+  background-position: center;
+  border: none;
+  padding: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__copyright {
+  a {
+    color: var(--giphy-blue);
+  }
+
+  a:visited {
+    color: var(--giphy-purple);
+  }
+}
