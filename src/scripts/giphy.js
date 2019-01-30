@@ -2,7 +2,7 @@ import '../styles/index.scss'
 
 import queryString from 'query-string'
 const url = "https://api.giphy.com/v1/gifs/search?"
-const limit = '&limit=5'
+const limit = '&limit=10'
 
 
 function search(searchQuery) {
